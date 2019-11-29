@@ -1,0 +1,99 @@
+tp cajero automatico consignas
+(renombrar en carpeta js, la extension pp por js, tuve que hacer esto porque el gmail considera inseguro el js)
+
+
+funcionalidades
+inicio sesion
+extraer dinero
+depositar dinero
+pagar servicios
+transferir dinero
+cambiar limite de extraccion
+
+guia
+1)conectar archivo js a html
+2)crear variable con en titularCuenta
+3)crear variable para el limiteExtraccion
+4)crear variable con el saldoCuenta
+5)crear funcion que sume dinero a
+la cuenta (a la variable saldoCuenta)
+argumento de entrada (dinero a sumar)
+6)funcionalidad deposito dinero
+o sea debe aparecer un cartel diciendo
+ingrese el dinero a depositar
+ingresa el dinero
+y lo suma a saldoCuenta
+Por ultimo actualizar el saldo en pantalla
+ejecutnado la funcion actualizarSaldoEnPantalla()
+7)Funcionalidad extraccion dinero
+pedirle al usuairo que ingrese
+el deposito a retirar
+mostrar por pantalla el saldo actual
+si hay saldo
+restar el dinero que se extrae
+actualizar html ocn la funcion actualizarSaldoEnPantalla()
+8)mostrar un alerta con la siguiente info
+ha retirado xx pesos
+saldo actual xx pesos
+saldo anterior xx pesos
+9) completar funcion limitedeextraccion
+
+    Pedirle al usuario que ingrese el nuevo límite de extracción
+    Modificar la variable que contiene al límite de extracción
+    Ejecutar la función actualizarLimiteEnPantalla() para que se actualice el nuevo límite en el HTML
+    Mostrar una alerta que muestre un mensaje con el nuevo límite de extracción
+10) limitar la extraccin del dinero
+
+    Verificar que el dinero que se quiere extraer no sea mayor al dinero que hay en la cuenta.
+    Verificar que el dinero que se quiere extraer no supere el límite de extracción.
+    Como el Home Banking maneja solo billetes de 100, verificar que el monto que se quiere extraer pueda ser entregado solo con esos billetes.
+  para ello agregar una validacion y en caso que no sea posible
+indicar con un alert (solo se entregan montos de a 100)
+
+11)Agregá una validación que, en el caso que el usuario quiera extraer más dinero del que hay en la cuenta, muestre una alerta como la siguiente.
+de este modo
+no hay saldo disponible para entregar esa cantida de dinero
+12)Funcionalidad pago de servicios
+servicio     costo
+agua      350
+telefono      425
+luz           210
+internet      300
+
+Mostrar una alerta como la siguiente para que el usuario pueda elegir el número que se corresponde con el servicio que quiere pagar.
+ingrese el servicio que desea abonar
+1-Agua
+2- telefono
+3-luz
+4-internet
+
+para ello utilizar switch
+actualizar el nuevo saldo en el html
+13) funcion transferencia de dinero
+nombre cuenta amiga      nro
+cuentaAmiga1          1
+cuentaAmiga2          2
+Luego completá la función transferirDinero() . Debe seguir los siguientes pasos:
+
+    Pedirle al usuario que ingrese el monto que desea transferir
+    Verificar que el monto que se quiere transferir se encuentre disponible en la cuenta. Si no hay saldo suficiente, se debe mostrar una alerta diciendo que no puede transferirse esa cantidad de dinero.
+    Si hay saldo disponible, se debe continuar pidiéndole al usuario que ingrese el número de cuenta al que desea transferir el dinero.
+    Verificar que la cuenta ingresada sea alguna de las cuentas amigas (variables declaradas anteriormente). Si la cuenta que el usuario ingresó no es una de las cuentas amigas, mostrar una alerta diciendo que solo puede transferirse dinero a una cuenta amiga.
+    Si no hubo ningún problema con la transferencia (había dinero en la cuenta y se ingresó una cuenta amiga correcta) se debe descontar el dinero que se desea transferir de la cuenta.
+    Actualizar el nuevo saldo en el HTML.
+mostrar un alert
+se ha transferido zzzz pesos
+destino: cuenta amiga xxx
+14)funcionalidad inicio sesion
+
+    Pedirle al usuario que ingrese el código de su cuenta.
+    Verificar que el código ingresado sea correcto.
+    Si el código es correcto, se debe mostrar una alerta como la siguiente:
+
+bienvenido xxx ya puedes comenzar a realizar operaciones
+
+    Si el código ingresado es incorrecto,
+se debe retener todo el dinero de la cuenta (dejar la cuenta con $0) y mostrar una alerta como la siguiente:
+
+
+Codigo incorrecto se ha retenido su dinero
